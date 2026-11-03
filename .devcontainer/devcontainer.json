@@ -1,9 +1,9 @@
 {
   "name": "Paca (run the full app)",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "hostRequirements": { "cpus": 4, "memory": "16gb" },
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2": { "moby": false }
   },
   "postStartCommand": "bash .devcontainer/start-paca.sh",
   "forwardPorts": [8080],
