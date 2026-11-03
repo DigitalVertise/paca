@@ -1,0 +1,13 @@
+{
+  "name": "Paca (run the full app)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "hostRequirements": { "cpus": 4, "memory": "16gb" },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postStartCommand": "bash .devcontainer/start-paca.sh",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": { "label": "Paca", "onAutoForward": "openBrowser" }
+  }
+}
